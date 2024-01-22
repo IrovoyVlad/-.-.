@@ -31,5 +31,22 @@ namespace WpfApp19Var.ViewModel
                     DateCreate = DateTime.Now.AddYears(-3),
                 });
         }
+
+        /// <summary>
+        /// Нахождение максимального Id
+        /// </summary>
+        /// <returns></returns>
+        public int MaxId()
+        {
+            int max = 0;
+            foreach (var item in this.Permissions)
+            {
+                if (max < item.Id)
+                {
+                    max = item.Id;
+                };
+            }
+            return max;
+        }
     }
 }

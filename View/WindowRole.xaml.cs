@@ -51,5 +51,18 @@ namespace WpfApp19Var.View
             }
             lvRole.ItemsSource = Roles;
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,5 +30,10 @@ namespace WpfApp19Var.Model
             Email = email;
             Status = status;
         }
+
+        public User ShallowCopy()
+        {
+            return (User)this.MemberwiseClone();
+        }
     }
 }

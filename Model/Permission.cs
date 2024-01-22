@@ -23,5 +23,9 @@ namespace WpfApp19Var.Model
             DateCreate = dateCreate;
         }
 
+        public Permission ShallowCopy()
+        {
+            return (Permission)this.MemberwiseClone();
+        }
     }
 }
