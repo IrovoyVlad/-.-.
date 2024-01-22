@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp19Var.ViewModel;
 
 namespace WpfApp19Var.Model
 {
@@ -23,5 +24,45 @@ namespace WpfApp19Var.Model
         }
 
         public AssignmentDPO() { }
+
+        public AssignmentDPO CopyFromAssignment(Assignment assignment)
+        {
+            AssignmentDPO assignmetDPO = new AssignmentDPO();
+            UserViewModel user = new UserViewModel();
+            string userName = string.Empty;
+            foreach (var p in user.Users)
+            {
+                if (p.Id == assignment.UserId)
+                {
+                    userName = p.UserName;
+                    break;
+                }
+            }
+
+            RoleViewModel document = new RoleViewModel();
+            string doc = string.Empty;
+            foreach (var d in document.Roles)
+            {
+                if (d.Id == assignment.RoleId)
+                {
+                    doc = d.NameRole;
+                    break;
+                }
+            }
+
+            if (userName != string.Empty && doc != string.Empty)
+            {
+                assignmetDPO.Id = assignment.Id;
+                assignmetDPO.User = userName;
+                assignmetDPO.Role = doc;
+                assignmetDPO.DateCreate = assignment.DateCreate;
+            }
+            return assignmetDPO;
+        }
+
+        public AssignmentDPO ShallowCopy()
+        {
+            return (AssignmentDPO)this.MemberwiseClone();
+        }
     }
 }

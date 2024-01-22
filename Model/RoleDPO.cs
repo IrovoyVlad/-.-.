@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WpfApp19Var.ViewModel;
 
 namespace WpfApp19Var.Model
 {
@@ -21,6 +22,36 @@ namespace WpfApp19Var.Model
             Permission = permition;
             NameRole = nameRole;
             Discription = discription;
+        }
+
+        public RoleDPO CopyFromRole(Role role)
+        {
+            RoleDPO roleDPO = new RoleDPO();
+            PermissionViewModel permissions = new PermissionViewModel();
+            string permissionName = string.Empty;
+            foreach (var p in permissions.Permissions)
+            {
+                if (p.Id == role.PermissionId)
+                {
+                    permissionName = p.PermissionName;
+                    break;
+                }
+            }
+
+            if (permissionName != string.Empty)
+            {
+                roleDPO.Id = role.Id;
+                roleDPO.Permission = permissionName;
+                roleDPO.NameRole = role.NameRole;
+                roleDPO.Discription = role.Discription;
+            }
+
+            return roleDPO;
+        }
+
+        public RoleDPO ShallowCopy()
+        {
+            return (RoleDPO)this.MemberwiseClone();
         }
     }
 }

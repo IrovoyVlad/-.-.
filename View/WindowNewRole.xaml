@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp19Var.View.WindowNewRole"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp19Var.View"
+        mc:Ignorable="d"
+        Title="WindowNewRole" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Код:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Права:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Имя роли:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Описанием:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbId" Grid.Row="0" Grid.Column="1" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" Text="{Binding Id}" IsEnabled="False"/>
+        <ComboBox x:Name="CbPremission" Grid.Row="1" Grid.Column="1" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" DisplayMemberPath="PermissionName"/>
+        <TextBox x:Name="TbRoleName" Grid.Row="2" Grid.Column="1" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" Text="{Binding NameRole}"/>
+        <TextBox x:Name="TbDiscription" Grid.Row="3" Grid.Column="1" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" Text="{Binding Discription}"/>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="BtSave" Content="Сохранить" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,10,10,5" IsDefault="True" Click="BtSave_Click"/>
+            <Button x:Name="BtCansel" Content="Отменить" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,10,10,5" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
