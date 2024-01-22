@@ -18,7 +18,7 @@ namespace WpfApp19Var.ViewModel
                 new Role()
                 {
                     Id = Roles.Count + 1,
-                    PermitionId = 1,
+                    PermissionId = 1,
                     NameRole = "Admin",
                     Discription = "Super user"
                 });
@@ -26,7 +26,7 @@ namespace WpfApp19Var.ViewModel
                 new Role()
                 {
                     Id = Roles.Count + 1,
-                    PermitionId = 2,
+                    PermissionId = 2,
                     NameRole = "User",
                     Discription = "Default user"
                 });

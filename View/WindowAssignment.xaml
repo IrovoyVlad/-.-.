@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:WpfApp19Var.View"
         mc:Ignorable="d"
         Title="Назначение прав" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Background="#FFD8D8D8">
+        <ListView x:Name="lvAssignment" Background="#FFD3CDCD">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Код" Width="50" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Пользователь" Width="110"  DisplayMemberBinding="{Binding User}"/>
+                        <GridViewColumn Header="Роль" Width="80"  DisplayMemberBinding="{Binding Role}"/>
+                        <GridViewColumn Header="Дата создания" Width="100" DisplayMemberBinding="{Binding DateCreate, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

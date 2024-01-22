@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:WpfApp19Var.View"
         mc:Ignorable="d"
         Title="Роли" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Background="#FFD8D8D8">
+        <ListView x:Name="lvRole" Background="#FFD3CDCD">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Код" Width="50" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Права" Width="110"  DisplayMemberBinding="{Binding Permission}"/>
+                        <GridViewColumn Header="Имя роли" Width="80"  DisplayMemberBinding="{Binding NameRole}"/>
+                        <GridViewColumn Header="Описание" Width="100" DisplayMemberBinding="{Binding Discription}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

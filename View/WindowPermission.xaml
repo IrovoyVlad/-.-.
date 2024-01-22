@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:WpfApp19Var.View"
         mc:Ignorable="d"
         Title="Права" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Background="#FFD8D8D8">
+        <ListView x:Name="lvPermisson" Background="#FFD3CDCD">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Код" Width="50" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Наименование права" Width="150"  DisplayMemberBinding="{Binding PermissionName}"/>
+                        <GridViewColumn Header="Описание" Width="100"  DisplayMemberBinding="{Binding Discription}"/>
+                        <GridViewColumn Header="Дата создания" Width="120" DisplayMemberBinding="{Binding DateCreate, StringFormat={}{0:dd\.}{0:MM\.}{0:yyyy}}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

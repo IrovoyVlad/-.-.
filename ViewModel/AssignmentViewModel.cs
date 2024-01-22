@@ -26,7 +26,7 @@ namespace WpfApp19Var.ViewModel
                 new Assignment()
                 {
                     Id = Assignments.Count + 1,
-                    RoleId = 1,
+                    RoleId = 2,
                     UserId = Assignments.Count + 1,
                     DateCreate = DateTime.Now.AddYears(-2),
                 });
@@ -34,7 +34,7 @@ namespace WpfApp19Var.ViewModel
                 new Assignment()
                 {
                     Id = Assignments.Count + 1,
-                    RoleId = 1,
+                    RoleId = 2,
                     UserId = Assignments.Count + 1,
                     DateCreate = DateTime.Now.AddYears(-1),
                 });
@@ -42,7 +42,7 @@ namespace WpfApp19Var.ViewModel
                 new Assignment()
                 {
                     Id = Assignments.Count + 1,
-                    RoleId = 1,
+                    RoleId = 2,
                     UserId = Assignments.Count + 1,
                     DateCreate = DateTime.Now.AddMonths(-3),
                 });

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp19Var.ViewModel;
 
 namespace WpfApp19Var.View
 {
@@ -22,6 +23,8 @@ namespace WpfApp19Var.View
         public WindowUser()
         {
             InitializeComponent();
+            UserViewModel vModel = new UserViewModel();
+            lvUser.ItemsSource = vModel.Users;
         }
     }
 }

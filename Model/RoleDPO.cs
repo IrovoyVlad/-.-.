@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace WpfApp19Var.Model
 {
-    internal class Role
+    class RoleDPO
     {
         public int Id { get; set; }
-        public int PermissionId { get; set; }
+        public string Permission { get; set; }
         public string NameRole { get; set; }
         public string Discription { get; set; }
 
-        public Role() { }
+        public RoleDPO() { }
 
-        public Role(int id, int permitionId, string nameRole, string discription)
+        public RoleDPO(int id, string permition, string nameRole, string discription)
         {
             Id = id;
-            PermissionId = permitionId;
+            Permission = permition;
             NameRole = nameRole;
             Discription = discription;
         }

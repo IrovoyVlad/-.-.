@@ -6,7 +6,19 @@
         xmlns:local="clr-namespace:WpfApp19Var.View"
         mc:Ignorable="d"
         Title="Ползователи" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Background="#FFD8D8D8">
+        <ListView x:Name="lvUser" Background="#FFD3CDCD">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Код" Width="50" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Логин" Width="150"  DisplayMemberBinding="{Binding UserName}"/>
+                        <GridViewColumn Header="Пароль" Width="100"  DisplayMemberBinding="{Binding Password}"/>
+                        <GridViewColumn Header="Эл. почта" Width="120" DisplayMemberBinding="{Binding Email}"/>
+                        <GridViewColumn Header="Статус" Width="120" DisplayMemberBinding="{Binding Status}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

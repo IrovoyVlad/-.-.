@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp19Var.Model;
+using WpfApp19Var.ViewModel;
 
 namespace WpfApp19Var.View
 {
@@ -22,6 +24,8 @@ namespace WpfApp19Var.View
         public WindowPermission()
         {
             InitializeComponent();
+            PermissionViewModel vModel = new PermissionViewModel();
+            lvPermisson.ItemsSource = vModel.Permissions;
         }
     }
 }
